@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Barbearia Alencar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cssfinalizado.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style> /*css do sobre nos, nao consegui colocar no arquivo externo, se alguem souber sinta-se a vontade para integrar lá */
+        h2{
+            font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+            color: #000;
+
+        }
+        #sobre-nos{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 50px;
+            padding: 20px;
+            
+        
+          }
+          .sobre-nos-container{
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+          }
+          .imagem-alencar img{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 20px;
+          }
+          .texto-sobre-nos{
+            max-width: 600px;
+          }
+          .texto-sobre-nos h2{
+            font-size: 24px;
+            margin-bottom: 15px;
+          }
+          .texto-sobre-nos p {
+            font-size: 16px;
+            line-height: 1.6px;
+            color: #333;
+            font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+          }
+    </style>
+</head>
+<body>
+    <header>
+        <nav><!--Area de Navegacao-->
+
+            <a class="logo" href="/">Barbearia Alencar</a>
+            <!--menu hamburguer-->
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <!--(Navegacao)-->
+            <ul class="nav-list">
+                <li><a href="/">INÍCIO</a></li>
+                <li><a href="#sobre-nos">SOBRE NÓS</a></li>
+                <li><a href="/">NOSSO TIME</a></li>
+                <li><a href="/">SERVIÇOS</a></li>
+                <li><a href="/">GALERIA</a></li>
+                <li><a href="#contato">CONTATO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Carrousel-->
+        <main>
+        <div class="container">
+            <div class="slider">
+                <div class="slides">
+                    <img src="imagens-oficial/ambiente.2024.jpeg" alt="Barbearia Alencar">
+                    <img src="imagens-oficial/ambiente.2024.jpeg" alt="Barbearia Alencar">
+                    <img src="imagens-oficial/banho.jpeg" alt="Barbearia Alencar">
+                    <img src="imagens-oficial/cafeteria.jpeg" alt="Barbearia Alencar">
+                    <img src="imagens-oficial/decoracao.jpeg" alt="Barbearia Alencar">
+                    <img src="imagens-oficial/logo.jpeg" alt="Barbearia Alencar">
+                </div>
+                    <button class="prev" onclick="prevSlide()">&#10094</button>
+                    <button class="next" onclick="nextSlide()">&#10095</button>
+                </div>
+                 
+            </div>
+        </div>
+
+        </main>
+        <!--inicio area sobre nos-->
+    <section id="sobre-nos">
+        <div class="sobre-nos-container">
+            <div class="imagem-alencar">
+                <img src="imagens-oficial/alencarimg.jpg" alt="foto-barbeiro" id="img-sobre">
+            </div>
+            <div class="texto-trajetoria">
+                <h2>Prazer, sou Leonardo Alencar dos Santos, mas pode me chamar de Léo! </h2><br>
+                <p>Em 2021, aos 23 anos, decidi seguir o caminho do empreendedorismo. Depois de quatro anos adquirindo experiência em diversas barbearias, aprendi a valorizar cada erro e a celebrar cada pequeno avanço. Para mim, o trabalho vai além da estética: construo relacionamentos onde clientes se tornam amigos. </p>
+                <p>Estou sempre em busca de me aprimorar e entender meu público, estudando marketing e vendas, além de me conectar com as necessidades dos meus clientes. </p><p> Acredito que um excelente atendimento é essencial, e criei um espaço pensado para que todos se sintam bem-vindos e confortáveis.</p>
+            </div>
+        </div>
+    
+    </section>
+    <!--fim sobre nos-->
+
+    <footer>
+        <a name="#contato"></a>
+        <h2 class="tit_ctt">
+            CONTATO
+        </h2>
+
+        <section class="mapa_botoes">
+            <section class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.4725504039!2d-46.31738492578785!3d-23.551465961226626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7139d85e8d6f%3A0x3fbf5864ee98b189!2sAlencar%20barbearia!5e0!3m2!1spt-BR!2sbr!4v1730246229190!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+
+            <section class="botoes">
+                <a href="https://www.instagram.com/Alencarbarbearia__">
+                    <button class="botao1">
+                        <img src="imagens-oficial/ig_icon.png" alt="Instagram Logo" class="ig_icon">
+                            Instagram
+                        </button>
+                    </a>
+
+                    <a href="https://api.whatsapp.com/send/?phone=5511910603357&text&type=phone_number&app_absent=0">
+                        <button class="botao2">
+                            <img src="imagens-oficial/wp_icon.png" alt="WhatsApp Logo" class="wp_icon">
+                            WhatsApp
+                        </button>
+                    </a>
+                    
+                    
+            </section>
+
+        </section>
+
+        
+        
+
+        
+        
+    </footer>
+        <section>
+            <a href="https://api.whatsapp.com/send?phone=5511910603357&text=Olá,%20bem%20vindo%20à%20Barbearia%20Alencar" class="icon_wp" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+        </section>
+    <script src="javascript.js/mobile-navbar.js"></script>
+    <script src="javascript.js/slides.js"></script> 
+     
+</body>
+</html>
