@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  /*estilizacao do menu*/
+  a:hover {
+    opacity: 0.7;
+   
+  }
+  
+  .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  /*area de navegacao*/
+  nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+    background: black;
+    height: 8vh;
+    z-index: 1000;
+  }
+  /*configurando ainda o main(nao terminei)!!!!!!*/
+  main {
+    background: url() no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+  }
+/*carrousel*/
+  .slider{
+    position: relative;
+    width: 100%;
+    height: 92vh;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .slider img{
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: row;
+    object-fit: cover; /* Faz com que as imagens se ajustem bem, sem distorções */
+  }
+
+  img.displaySlide{
+    display: block;
+    animation-name: fade ;
+    animation-duration: 1.5s;
+  }
+
+  .container {
+    display: flex; /* Alinha o slider e outro conteúdo lado a lado */
+    justify-content: space-between; /* Deixa o espaço balanceado entre os elementos */
+    align-items: center; /* Alinha verticalmente os elementos */
+    height: 0vh; /* Altura da área do container */
+    padding: 0px; /* Adiciona espaço ao redor */
+      
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  .slider {
+    height: 50vh; /* Ajusta a altura do slider para tablets */
+  }
+
+  .container {
+    flex-direction: column; /* Empilha o conteúdo em telas menores */
+  }
+}
+
+/* Responsividade para smartphones */
+@media (max-width: 480px) {
+  .slider {
+    height: 40vh; /* Ajusta a altura do slider para smartphones */
+  }
+}
+
+    /*estilizando botoes*/
+  }
+.slider button{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  padding: 10px 15px ;
+  background-color: hsla(0, 0%, 0%, 0.541);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 500;
+  border-radius: 20px;
+}
+.prev{
+  left: 0;
+}
+.next{
+  right: 0;
+}
+  /*animacao botao*/
+@keyframes fade {
+  from{opacity: .5;}
+  to {opacity: 1;}
+}
+
+/*Responsividade botoes*/
+@media (max-width: 768px) {
+  .slider button {
+      font-size: 1.5rem;  /* Reduzindo o tamanho da fonte */
+      padding: 8px 12px;  /* Reduzindo o padding */
+  }
+}
+
+/* (smartphones) */
+@media (max-width: 480px) {
+  .slider button {
+      font-size: 1.2rem;  /* Reduzindo ainda mais o tamanho da fonte */
+      padding: 6px 10px;  /* Ajustando o padding */
+  }
+}
+
+
+  /*navegacao*/
+  .nav-list {
+    list-style: none;
+    display: flex;
+    z-index: 1000;
+  }
+  
+  .nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+  }
+  /*menu hamburguer*/
+  .mobile-menu {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+  }
+  /*responsividade*/
+  @media (max-width: 999px) {
+    body {
+      overflow-x: hidden;
+      font-family:Roboto, sans-serif
+    }
+    .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #23232e;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+      transition: transform 0.3s ease-in;
+      z-index: 1000;
+    }
+    .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+    }
+    .mobile-menu {
+      display: block;
+    }
+  }
+  
+  .nav-list.active {
+    transform: translateX(0);
+  }
+  /*animacao menu*/
+  @keyframes navLinkFade {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+  }
+  
+  .mobile-menu.active .line2 {
+    opacity: 0;
+  }
+  
+  .mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
+
+  
+
